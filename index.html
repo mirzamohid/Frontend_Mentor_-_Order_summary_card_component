@@ -1,207 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
-    :root {
-      /* Layout */
-      --device-mobile: 375px;
-      --device-desktop: 1440px;
-
-      /* Primary Color */
-      --color-primary-paleblue:hsl(225, 100%, 94%);
-      --color-primary-brightblue: hsl(245, 75%, 52%);
-
-      /* Neutral Color */
-      --color-neutral-verypaleblue: hsl(225, 100%, 98%);
-      --color-neutral-desaturatedblue: hsl(224, 23%, 55%);
-      --color-neutral-darkblue: hsl(223, 47%, 23%);
-
-      /* Hovered Color */
-      --color-hover: hsl(245, 83%, 68%);
-
-      /* Body Copy  */
-      --font-size-paragraph: 16px;
-
-      /* Font  */
-      --font-default: 'Red Hat Display', sans-serif;
-      --font-regular: 500; /* Regular */
-      --font-bold: 700; /* Bold */
-      --font-black: 900; /* Black */
-
-      --rounded: 10px;
-    }
-
-    *,
-    ::before,
-    ::after {
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100%;
-      font-family: var(--font-default);
-      font-size: var(--font-size-paragraph);
-      font-weight: var(--font-regular);
-      color: var(--color-neutral-desaturatedblue);
-      background: no-repeat center/1000% url(images/pattern-background-mobile.svg);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-content: center;
-    }
-
-    article {
-      display: flex;
-      flex-direction: column;
-      box-shadow: hsla(245, 75%, 52%, 0.1) 0px 20px 20px 3px;
-      border-radius: 20px;
-      margin: 0 auto 10px;
-      width: 330px;
-    }
-
-   .hero {
-      border-radius: 20px 20px 0 0;
-    }
-
-    .content {
-      background-color: white;
-      padding: 20px 20px;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      border-radius: 0 0 20px 20px;
-    }
-
-    .content > * {
-      margin-top: 20px;
-    }
-
-    .content > .description {
-      line-height: 1.8;
-    }
-
-    .order {
-      display: flex;
-      flex-direction: row;
-      background-color: var(--color-neutral-verypaleblue);
-      align-items: center;
-      border-radius: 10px;
-      padding: 15px;
-      justify-content: space-between;
-    }
-
-    .order > .item {
-      flex-basis: 50%;
-      text-align: start;
-      padding-left: 10px;
-    }
-
-    .order > .button-link {
-      text-decoration: underline;
-      color: var(--color-primary-brightblue);
-      
-    }
-
-    .heading {
-      color: var(--color-neutral-darkblue);
-      font-weight: var(--font-black);
-    }
-
-    .button {
-      cursor: pointer;
-      border: 0;
-      width: 100%;
-
-      font-size: var(--font-size-paragraph);
-      font-family: var(--font-default);
-      font-weight: var(--font-black);
-      text-align: center;
-      text-decoration: none;
-
-      border-radius: var(--rounded);
-      padding: 16px;
-    }
-
-    .button-link {
-      background: none;
-      border: none;
-      padding: 0;
-      width: auto;
-    }
-    .button-link:hover {
-      text-decoration: none;
-      color: var(--color-hover);
-    }
-
-    #button-change {
-      color: hsl(245, 65%, 41%);
-    }
-    #button-proceed {
-      color: var(--color-neutral-verypaleblue);
-      background-color: var(--color-primary-brightblue);
-      box-shadow: hsla(245, 75%, 52%, 0.2) 0px 20px 20px 3px;
-    }
-
-    #button-proceed:hover {
-      background-color: var(--color-hover);
-    }
-
-    #button-cancel {
-      color: var(--color-neutral-desaturatedblue);
-      margin-bottom: 20px;
-    }
-
-    #button-cancel:hover {
-      color: var(--color-neutral-darkblue);
-    }
-
-    .attribution { font-size: 11px; text-align: center; position: relative; bottom: 0;}
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <article>
-    <img class="hero" src="images/illustration-hero.svg" alt="A dancing woman">
-
-    <div class="content">
-      <header>
-        <h1 class="heading">Order Summary</h1>
-      </header>
-      <p class="description">You can now listen to millions of songs, audiobooks, and podcasts on any 
-        device anywhere you like!
-      </p>
-      <div class="order">
-        <img src="/images/icon-music.svg" alt="Music icon" id="music-icon">
-        <div class="item">
-          <div class="heading">Annual Plan</div>
-          <div>$59.99/year</div>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="card">
+      <img src="images/illustration-hero.svg" alt="Illustration of a happy woman enjoying music on her device" />
+      <div class="summary-content">
+        <div class="summary-description">
+          <h1>Order Summary</h1>
+          <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
         </div>
-          <button class="button button-link" id="button-change">Change</a>
-      </div>
-      <div>
-        <button class="button" id="button-proceed">Proceed to Payment</button>
-      </div>
-      <div>
-        <button class="button button-link" id="button-cancel">Cancel Order</button>
+
+        <div class="item">
+          <img src="images/icon-music.svg" alt="Music icon symbolizing the order of a music plan" />
+          <div class="item-description">
+            <div class="item-name">Annual Plan</div>
+            <div class="item-price">$59.99/year</div>
+          </div>
+          <button class="button button-link">Change</button>
+        </div>
+
+        <div class="action">
+          <button type="submit" class="button button-cta">Proceed to Payment</button>
+          <button type="reset" class="button button-text">Cancel Order</button>
+        </div>
       </div>
     </div>
-  </article>
-    
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Adib Haziq</a>.
-  </div>
-</body>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Adib Haziq</a>.
+    </div>
+  </body>
 </html>
