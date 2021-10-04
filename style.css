@@ -53,13 +53,15 @@ body {
     font-family: 'Red Hat Display', sans-serif;
     font-size: var(--font-bodyParagraph);
     background: var(--color-primary-paleBlue) url(images/pattern-background-mobile.svg) no-repeat top/100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 5px;
 }
 
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
 .card {
     width: 327px;
     background: white;
@@ -188,6 +190,7 @@ body {
 .attribution {
     text-align: center;
     font-size: 8px;
+    display: none;
 }
 
 @media screen and (min-width: 1440px) {
