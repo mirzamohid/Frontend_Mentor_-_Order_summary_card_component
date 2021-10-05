@@ -1,264 +1,236 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 :root {
-    /* Layout */
-    --device-mobile: 375px;
-    --device-desktop: 1440px;
+  /* Layout */
+  --device-mobile: 375px;
+  --device-desktop: 1440px;
 
-    /*  Colors  */
-    /* Primary */
-    --color-primary-paleBlue:hsl(225, 100%, 94%);
-    --color-primary-brightBlue: hsl(245, 75%, 52%);
+  /*  Colors  */
+  /* Primary */
+  --color-primary-paleBlue: hsl(225, 100%, 94%);
+  --color-primary-brightBlue: hsl(245, 75%, 52%);
 
-    /* Neutral */
-    --color-neutral-veryPaleBlue: hsl(225, 100%, 98%);
-    --color-neutral-desaturatedBlue: hsl(224, 23%, 55%);
-    --color-neutral-darkBlue: hsl(223, 47%, 23%);
+  /* Neutral */
+  --color-neutral-veryPaleBlue: hsl(225, 100%, 98%);
+  --color-neutral-desaturatedBlue: hsl(224, 23%, 55%);
+  --color-neutral-darkBlue: hsl(223, 47%, 23%);
 
-    /* Hover */
-    --color-hover-brightBlue: hsl(245, 83%, 68%);
-    --color-hover-desaturatedBlue: hsla(223, 47%, 23%, 1);
+  /* Hover */
+  --color-hover-brightBlue: hsl(245, 83%, 68%);
+  --color-hover-desaturatedBlue: hsla(223, 47%, 23%, 1);
 
-    /* Text */
-    /* Weight */
-    --font-regular: 500; /* Regular */
-    --font-bold: 700; /* Bold */
-    --font-black: 900; /* Black */
+  /* Text */
+  /* Weight */
+  --font-regular: 500; /* Regular */
+  --font-bold: 700; /* Bold */
+  --font-black: 900; /* Black */
 
-    /* Size */
-    --font-bodyParagraph: 16px;
-    --font-button: 15px;
+  /* Size */
+  --font-bodyParagraph: 16px;
+  --font-button: 15px;
 
-    /* Border */
-    /* Size */
-    --rounded: 20px;
-    --rounded-item: 10px;
-    --rounded-button: 10px;
+  /* Border */
+  /* Size */
+  --rounded: 20px;
+  --rounded-item: 10px;
+  --rounded-button: 10px;
 
-    /* Effect */
-    /* Shadow */
-    --box-shadow: 0px 2px 4px rgba(113, 127, 166, 0.4), 0px 24px 25px 15px rgba(113, 127, 166, 0.15), 0px 12px 20px rgba(123, 97, 255, 0.15);
+  /* Effect */
+  /* Shadow */
+  --box-shadow: 0px 2px 4px rgba(113, 127, 166, 0.4),
+    0px 24px 25px 15px rgba(113, 127, 166, 0.15),
+    0px 12px 20px rgba(123, 97, 255, 0.15);
 }
 *,
 ::before,
 ::after {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
-
 html,
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-    font-family: 'Red Hat Display', sans-serif;
-    font-size: var(--font-bodyParagraph);
-    background: var(--color-primary-paleBlue) url(images/pattern-background-mobile.svg) no-repeat top/100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--font-bodyParagraph);
+  background: var(--color-primary-paleBlue)
+    url(images/pattern-background-mobile.svg) no-repeat top/100%;
 }
-
 .wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 .card {
-    width: 327px;
-    background: white;
-    box-shadow: var(--box-shadow);
-    border-radius: var(--rounded);
-    overflow: hidden;
+  width: 327px;
+  background: white;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--rounded);
+  overflow: hidden;
 }
-
 .card > img {
-    height: 160px;
-    margin-bottom: 32px;
+  height: 160px;
+  margin-bottom: 32px;
 }
-
 .summary-content {
-    margin: 0 25px 25px;
+  margin: 0 25px 25px;
 }
-
 .summary-description {
-    margin: 0 10px 25px;
-    text-align: center;
+  margin: 0 10px 25px;
+  text-align: center;
 }
-
 .summary-description > h1 {
-    font-weight: var(--font-black);
-    font-size: 22px;
-    color: var(--color-neutral-darkBlue);
-    margin-bottom: 16px;
+  font-weight: var(--font-black);
+  font-size: 22px;
+  color: var(--color-neutral-darkBlue);
+  margin-bottom: 16px;
 }
-
 .summary-description > p {
-    font-size: 15px;
-    line-height: 164.5%;
-    letter-spacing: 0.02em;
-    color: var(--color-neutral-desaturatedBlue);
+  font-size: 15px;
+  line-height: 164.5%;
+  letter-spacing: 0.02em;
+  color: var(--color-neutral-desaturatedBlue);
 }
-
 .item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px 15px;
-    height: 80px;
-    background: var(--color-neutral-veryPaleBlue);
-    border-radius: var(--rounded-item);
-    margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 15px;
+  height: 80px;
+  background: var(--color-neutral-veryPaleBlue);
+  border-radius: var(--rounded-item);
+  margin-bottom: 25px;
 }
-
 .item-description {
-    margin: 0 20px;
-    flex-grow: 1;
+  margin: 0 20px;
+  flex-grow: 1;
 }
-
 .item-name {
-    font-weight: var(--font-black);
-    font-size: 14px;
-    letter-spacing: 0.01em;
-    color: var(--color-neutral-darkBlue);
+  font-weight: var(--font-black);
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--color-neutral-darkBlue);
 }
-
 .item-price {
-    font-size: 14px;
-    letter-spacing: 0.03em;
-    color: var(--color-neutral-desaturatedBlue);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--color-neutral-desaturatedBlue);
 }
-
 .action {
-    display: flex;
-    flex-direction: column;
-    gap: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
 }
-
 .button {
-    justify-content: center;
-    cursor: pointer;
-    font-family: 'Red Hat Display', sans-serif;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Red Hat Display", sans-serif;
 }
-
 .button-cta {
-    background-color: var(--color-primary-brightBlue);
-    color: white;
-    box-shadow: var(--box-shadow);
-    border: 0 var(--rounded-button);
-    border-radius: var(--rounded-button);
+  background-color: var(--color-primary-brightBlue);
+  color: white;
+  box-shadow: var(--box-shadow);
+  border: 0 var(--rounded-button);
+  border-radius: var(--rounded-button);
 }
-
-.button-cta:hover { background-color: var(--color-hover-brightBlue); }
-
+.button-cta:hover {
+  background-color: var(--color-hover-brightBlue);
+}
 .button-link {
-    font-size: 13px;
-    font-weight: var(--font-bold);
-    letter-spacing: 0.01em;
-    text-decoration: underline;
-    cursor: pointer;
-    color: var(--color-primary-brightBlue);
+  font-size: 13px;
+  font-weight: var(--font-bold);
+  letter-spacing: 0.01em;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--color-primary-brightBlue);
 }
-
-.button-link:hover { 
-    color: var(--color-hover-brightBlue);
-    text-decoration: none;
+.button-link:hover {
+  color: var(--color-hover-brightBlue);
+  text-decoration: none;
 }
-
-.button-text { 
-    color: var(--color-neutral-desaturatedBlue); 
+.button-text {
+  color: var(--color-neutral-desaturatedBlue);
 }
-
-.button-text:hover { color: var(--color-hover-desaturatedBlue); }
-
+.button-text:hover {
+  color: var(--color-hover-desaturatedBlue);
+}
 .button-cta,
 .button-text {
-    font-weight: var(--font-bold);
-    font-size: var(--font-button);
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    align-items: flex-start;
-    padding: 14px 32px; 
+  font-weight: var(--font-bold);
+  font-size: var(--font-button);
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: flex-start;
+  padding: 14px 32px;
 }
-
-.button-text, 
+.button-text,
 .button-link {
-    background: none!important;
-    border: none;
-    padding: 0;
+  background: none !important;
+  border: none;
+  padding: 0;
 }
-
 .attribution {
-    text-align: center;
-    font-size: 8px;
-    display: none;
+  text-align: center;
+  font-size: 8px;
+  display: none;
 }
-
 @media screen and (min-width: 1440px) {
-    html,
-    body {
-        background: var(--color-primary-paleBlue) url(images/pattern-background-desktop.svg) no-repeat top/100%;
-    }
-
-    .card {
-        width: 450px;
-    }
-
-    .card > img {
-        height: 220px;
-        margin-bottom: 40px;
-    }
-
-    .summary-content {
-        margin: 0 48px 48px;
-    }
-    
-    .summary-description {
-        margin: 0 20px 23px;
-    }
-    
-    .summary-description > h1 {
-        font-size: 27px;
-        margin-bottom: 26px;
-        height: 28px;
-    }
-    
-    .summary-description > p {
-        font-size: 17px;
-        line-height: 155%;
-        letter-spacing: -0.01em;
-        height: 73px;
-    }
-    
-    .item {
-        padding: 25px;
-        margin-bottom: 34px;
-        height: 98px;
-    }
-    
-    .item-description {
-        margin: 0 20px;
-    }
-    
-    .item-name {
-        font-size: 17px;
-        letter-spacing: -0.01em;
-    }
-    
-    .item-price {
-        font-size: 16px;
-        letter-spacing: 0.045em;
-    }
-    
-    .action {
-        gap: 34px;
-    }
-    
-    .button-link {
-        font-size: 14px;
-        letter-spacing: 0em;
-    }
-    
-    .attribution {
-        font-size: 10px;
-    }
+  html,
+  body {
+    background: var(--color-primary-paleBlue)
+      url(images/pattern-background-desktop.svg) no-repeat top/100%;
+  }
+  .card {
+    width: 450px;
+  }
+  .card > img {
+    height: 220px;
+    margin-bottom: 40px;
+  }
+  .summary-content {
+    margin: 0 48px 48px;
+  }
+  .summary-description {
+    margin: 0 20px 23px;
+  }
+  .summary-description > h1 {
+    font-size: 27px;
+    margin-bottom: 26px;
+    height: 28px;
+  }
+  .summary-description > p {
+    font-size: 17px;
+    line-height: 155%;
+    letter-spacing: -0.01em;
+    height: 73px;
+  }
+  .item {
+    padding: 25px;
+    margin-bottom: 34px;
+    height: 98px;
+  }
+  .item-description {
+    margin: 0 20px;
+  }
+  .item-name {
+    font-size: 17px;
+    letter-spacing: -0.01em;
+  }
+  .item-price {
+    font-size: 16px;
+    letter-spacing: 0.045em;
+  }
+  .action {
+    gap: 34px;
+  }
+  .button-link {
+    font-size: 14px;
+    letter-spacing: 0em;
+  }
+  .attribution {
+    font-size: 10px;
+  }
 }
